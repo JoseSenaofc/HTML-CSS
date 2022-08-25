@@ -13,6 +13,8 @@
 
     table {
         width: 500px;
+        border-collapse: collapse;
+        position: relative;
     }
     td, th {
         border: 1px solid black;
@@ -20,12 +22,29 @@
     }
 
     thead, tfoot {
-        background-color: gray;
+        background-color: rgb(38, 38, 38);
         color: white;
     }
 
     td.num {
         text-align: right;
+    }
+
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgray;
+    }
+
+    thead > tr > th {
+        position: sticky;
+        top: -1px;
+        background-color: rgb(38, 38, 38);
+    }
+
+    tbody > tr:nth-child(even) {
+        background-color: lightgrey;
     }
     </style>
 </head>
@@ -34,6 +53,7 @@
     <!-- ANATOMIA PARA TABELAS GRANDES
     TABLE 
        THEAD 
+           CAPTION
            TR, TD, TH
        TBODY
            TR, TD, TH
@@ -42,10 +62,11 @@
     -->
 </body>
 <table>
+    <Caption>População das Unidades Federativas</Caption>
     <thead>
         <tr>
-            <th>Estado</th>
-            <th>População</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 50px;">População</th>
         </tr>
     </thead>
     <tbody>
@@ -161,9 +182,12 @@
     </tbody>
     <tfoot>
         <tr>
-            <th>Total de Habitantes</th>
+            <th scope="row">Total de Habitantes</th>
             <td><strong>210 147 125</strong></td>
         </tr>
     </tfoot>
 </table>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus voluptatum nihil inventore ipsam minima autem animi et ratione error. Nostrum iusto, ex impedit id quo perferendis eos assumenda quas ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ullam eius sapiente nemo laudantium maiores autem tempora earum? Ipsa qui delectus nemo iste quam nesciunt officiis ipsam perspiciatis enim commodi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ipsum minima quo dolorum, mollitia ea nesciunt nihil hic perspiciatis sunt, quos aspernatur eum? Quia, ducimus quam fuga debitis sunt quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus culpa numquam, rerum repellendus voluptate ut et perspiciatis praesentium provident vel cupiditate odio. Dolorem aliquid nostrum maiores, consectetur rem dignissimos cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, atque? Sit minima est, a ipsa consequuntur impedit aperiam delectus sint corrupti eum commodi tempore laborum necessitatibus labore ex! Deleniti, pariatur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt assumenda iste labore nam dolorem. Porro aliquid labore omnis fuga ea, dolores similique optio tempora in rem maiores accusantium veritatis totam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsum quam distinctio officia dicta ipsa aliquam enim, facilis error repellat. Inventore eveniet eius possimus. Alias sequi asperiores repudiandae unde deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta accusamus optio recusandae itaque qui veritatis ratione fuga nulla officiis saepe consequuntur fugit in soluta quos eveniet, rerum possimus repellendus consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo temporibus ab culpa assumenda enim provident, earum quaerat delectus sed fugit, explicabo quam dolorum maiores eum magni cum veritatis error. Atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptatem ducimus praesentium nam ea quod dignissimos error quibusdam harum quas recusandae, dolores quis voluptate in consequuntur ratione iusto alias. Consectetur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis cum, quae fuga modi debitis laudantium deserunt cumque, quo soluta pariatur consequuntur veritatis, minus non nesciunt asperiores a consectetur consequatur porro. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur distinctio asperiores consequatur laborum dolore necessitatibus quasi, harum, quis nulla, numquam optio minus accusantium maxime voluptate aperiam? Exercitationem nostrum ullam minima.
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto nisi magni corrupti qui, beatae quod quidem enim esse quas, quaerat in voluptates a rem repellat adipisci. Iure, numquam velit?
+</p>
 </html>
